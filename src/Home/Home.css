@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.home-main{
+    background-image: url('../Assets/Wheater.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.main{
+    min-height: 100vh;
+}
