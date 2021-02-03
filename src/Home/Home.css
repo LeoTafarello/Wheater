@@ -4,11 +4,89 @@
 
 
 .home-main{
-    background-image: url('../Assets/Wheater.png');
+    background-image: url('../Assets/Sunny.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.home-main-cold{
+    background-image: url('../Assets/Cold.png');
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .main{
-    min-height: 100vh;
+    min-height: 91.7vh;
+    padding: 20px;
+}
+
+.home-search-row{
+    width: 100%;    
+    margin: 0 0 6vh;
+    text-align: center;
+}
+
+.search-bar{
+    display:float;
+    width: 50%;
+    padding: 1.5vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 1.4vh;
+    margin-top: -35px;
+    font-size: 2vh;
+    color: black;
+}
+
+.search-bar:focus{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.location-box{
+    text-align: center;
+    width: 100%;
+    padding-top: 6vh;
+}
+
+.location-name{
+    font-size: 5vh;
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    text-shadow: 3px 3px rgba(0, 0, 0, 2);
+}
+
+.temp-box{
+    display:flex;
+    margin-top: 17vh;
+    margin-left: 30vh;
+    margin-right: 30vh;
+    padding-top: 4vh;
+    background-color: rgba(27, 152, 224, 0.7);
+    border-radius: 2vh;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+}
+
+.temp-celsius{
+    width: 50%;
+    text-align: left;
+    padding-right: 10px;
+    color: white;
+    font-size: 20vh;
+    border-radius: 16px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 2);
+}
+
+.after-temp{
+    font-size: 5vh;
+    margin-left: -6vh;
+    color: #777777;
+}
+
+.weather-main{
+    width: 50%;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    font-size: 9vh;
+    border-radius: 16px;
+    text-shadow: 3px 3px rgba(0, 0, 0, 2);
 }
