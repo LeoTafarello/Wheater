@@ -3,6 +3,7 @@
 }
 
 
+
 .home-main{
     background-image: url('../Assets/Sunny.png');
     background-size: cover;
@@ -54,39 +55,92 @@
     text-shadow: 3px 3px rgba(0, 0, 0, 2);
 }
 
-.temp-box{
-    display:flex;
+.temp-box-hot{
+    
     margin-top: 17vh;
-    margin-left: 30vh;
-    margin-right: 30vh;
+    margin-left: 60vh;
+    margin-right: 60vh;
     padding-top: 4vh;
-    background-color: rgba(27, 152, 224, 0.7);
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#046f94),to(#3493ad));
     border-radius: 2vh;
     box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
 }
 
+.temp-box-cold{
+    margin-top: 17vh;
+    margin-left: 40vh;
+    margin-right: 40vh;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#6e3f98),to(#a37697));
+    border-radius: 2vh;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+}
+
+
+.temp-box-main{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .temp-celsius{
-    width: 50%;
     text-align: left;
-    padding-right: 10px;
+    padding-left: 30px;
+    padding-top: 15px;
     color: white;
-    font-size: 20vh;
+    font-size: 8rem;
     border-radius: 16px;
     text-shadow: 3px 3px rgba(0, 0, 0, 2);
 }
 
 .after-temp{
-    font-size: 5vh;
+    font-size: 3rem;
     margin-left: -6vh;
     color: #777777;
 }
 
 .weather-main{
-    width: 50%;
+    padding-top: 15px;
     text-align: right;
     padding-right: 10px;
+}
+
+.weather-icons{
+    height: 150px!important;
+    width: 150px!important;
+}
+
+.weather-name{
     color: white;
-    font-size: 9vh;
+    font-size: 2.3rem;
     border-radius: 16px;
-    text-shadow: 3px 3px rgba(0, 0, 0, 2);
+    padding-right: 15px;
+    margin-top: -35px;
+}
+
+.weather-name::first-letter{
+    text-transform: capitalize;
+}
+
+.temp-box-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-enviroment{
+
+    color: white;
+    font-size: 2rem;
+    border-radius: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.weather-min-max{
+    color: white;
+    font-size: 2rem;
+    border-radius: 16px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    padding-right: 30px;
+    padding-top: 20px;
 }

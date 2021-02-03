@@ -19,6 +19,7 @@ export default function Home() {
                 .then(result => {
                     SetWheater(result);
                     Setcity('');
+                    console.log(result);
                 })
             }
         }
@@ -36,18 +37,25 @@ export default function Home() {
                         <div className='location-box'>
                             <div className='location-name'>{weather.name}, {weather.sys.country}</div>
                         </div>
-                        <div className='temp-box'>
-                            <div className='temp-celsius'>
-                                {Math.round(weather.main.temp)}º
-                                <span class='after-temp'>C</span>
+                        <div className={(typeof weather.main.temp > 15) ? 'temp-box-hot' : 'temp-box-cold'}>
+                            <div className='temp-box-main'>
+                                <div className='temp-celsius'>
+                                     {Math.round(weather.main.temp)}º
+                                    <span className='after-temp'>C</span>
                         
-                            </div>
-                            <div className='weather-main'>
-                                <img className='weather-icons' src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt='weather'/>
-                                <div className='weather-name'>{weather.weather[0].main}</div>
-                            </div>
+                                 </div>
+                                <div className='weather-main'>
+                                    <img className='weather-icons' src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt='weather'/>
+                                    <div className='weather-name'>{weather.weather[0].description}</div>
+                                </div>
+                                </div>
+                                <div className='temp-box-footer'>
+                                    <div className='weather-enviroment'>Temperature Fells Like: {weather.main.feels_like}</div>
+                                    <div className='weather-min-max'>Max {weather.main.temp_max}º / Min{weather.main.temp_min}º</div>
+                                </div>
+                            
                         </div>
-                   </div>
+                        </div>
                    ) : ('')}
                </main>
             </div>
