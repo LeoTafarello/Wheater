@@ -19,6 +19,7 @@
 .main{
     min-height: 91.7vh;
     padding: 20px;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
 }
 
 .home-search-row{
@@ -56,25 +57,68 @@
 }
 
 .temp-box-hot{
-    
     margin-top: 17vh;
-    margin-left: 60vh;
-    margin-right: 60vh;
-    padding-top: 4vh;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#046f94),to(#3493ad));
+    margin-left: 70vh;
+    margin-right: 70vh;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(4, 111, 148, 0.6)),to(rgba(52, 147, 173, 0.6)));
     border-radius: 2vh;
-    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
 }
 
+@media(max-width: 1800px){
+.temp-box-hot{
+    margin-top: 17vh;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(4, 111, 148, 0.6)),to(rgba(52, 147, 173, 0.6)));
+    border-radius: 2vh;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
+}
+}
+
+@media(max-width: 1100px){
+    .temp-box-hot{
+        margin-top: 17vh;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(4, 111, 148, 0.6)),to(rgba(52, 147, 173, 0.6)));
+        border-radius: 2vh;
+        box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
+    }
+    }
+    
 .temp-box-cold{
     margin-top: 17vh;
-    margin-left: 40vh;
-    margin-right: 40vh;
-    background-image: -webkit-gradient(linear,left top,left bottom,from(#6e3f98),to(#a37697));
+    margin-left: 70vh;
+    margin-right: 70vh;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(110, 63, 152, 0.75)),to(rgba(163, 118, 151, 0.75)));
     border-radius: 2vh;
-    box-shadow: 0 0 12px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
 }
 
+
+@media(max-width: 1800px){ 
+    .temp-box-cold{
+        margin-top: 17vh;
+        margin-left: 20rem;
+        margin-right: 20rem;
+        background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(110, 63, 152, 0.75)),to(rgba(163, 118, 151, 0.75)));
+        border-radius: 2vh;
+        box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
+    }
+    }
+
+
+@media(max-width: 1100px){ 
+    .temp-box-cold{
+        margin-top: 17vh;
+        margin-left: 2rem;
+        margin-right: 2rem;
+        background-image: -webkit-gradient(linear,left top,left bottom,from(rgba(110, 63, 152, 0.75)),to(rgba(163, 118, 151, 0.75)));
+        border-radius: 2vh;
+        box-shadow: 0 0 12px 0 rgb(0 0 0 / 80%);
+    }
+    }
 
 .temp-box-main{
     display: flex;
@@ -86,6 +130,7 @@
     text-align: left;
     padding-left: 30px;
     padding-top: 15px;
+    padding-right: 2vh;
     color: white;
     font-size: 8rem;
     border-radius: 16px;
@@ -101,7 +146,7 @@
 .weather-main{
     padding-top: 15px;
     text-align: right;
-    padding-right: 10px;
+    padding-right: 30px;
 }
 
 .weather-icons{
@@ -113,7 +158,6 @@
     color: white;
     font-size: 2.3rem;
     border-radius: 16px;
-    padding-right: 15px;
     margin-top: -35px;
 }
 

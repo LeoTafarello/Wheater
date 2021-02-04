@@ -19,11 +19,21 @@ export default function Home() {
                 .then(result => {
                     SetWheater(result);
                     Setcity('');
-                    console.log(result);
                 })
+
+                
+            /*switch(true){
+                case (this.SetWheater(weather.weather[0].id)) >= 200 && (this.SetWheater(weather.weather[0].id)) <= 232:
+                    home_main_weater = 'storm';
+                    break;
+                case weather.weather[0].id === 800:
+                    home_main_weater = 'clear sky';
+                    console.log(home_main_weater)
+                break;
+            }*/
+
             }
         }
-
 
         return(
 
@@ -33,11 +43,11 @@ export default function Home() {
                        <input className='search-bar' type='text' placeholder='Search City' onChange= {e=> Setcity(e.target.value)} value={city} onKeyPress={search} />
                    </div>
                    {(typeof weather.main != 'undefined') ? (
-                   <div>
+                   <div className='body'>
                         <div className='location-box'>
                             <div className='location-name'>{weather.name}, {weather.sys.country}</div>
                         </div>
-                        <div className={(typeof weather.main.temp > 15) ? 'temp-box-hot' : 'temp-box-cold'}>
+                        <div className={(typeof weather.main != 'undefined') ? ((weather.main.temp > 15) ? 'temp-box-hot' : 'temp-box-cold') : 'temp-box-hot'}>
                             <div className='temp-box-main'>
                                 <div className='temp-celsius'>
                                      {Math.round(weather.main.temp)}º
@@ -50,12 +60,11 @@ export default function Home() {
                                 </div>
                                 </div>
                                 <div className='temp-box-footer'>
-                                    <div className='weather-enviroment'>Temperature Fells Like: {weather.main.feels_like}</div>
-                                    <div className='weather-min-max'>Max {weather.main.temp_max}º / Min{weather.main.temp_min}º</div>
+                                    <div className='weather-enviroment'>Temperature Fells Like: {Math.round(weather.main.feels_like)}ºC</div>
+                                    <div className='weather-min-max'>Max {weather.main.temp_max}ºC / Min {weather.main.temp_min}ºC</div>
                                 </div>
-                            
                         </div>
-                        </div>
+                    </div>
                    ) : ('')}
                </main>
             </div>
